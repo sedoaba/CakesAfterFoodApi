@@ -24,11 +24,11 @@ authController.post("/register", async(req, res) => {
     }
 })
 
-authController.post("/login", async() => {
+authController.post("/login", async(req, res) => {
 
     try {
         const user = await User.findOne({ email: req.body.email });
-        if (!exists) {
+        if (!user) {
             throw new Error("User does not exist")
 
         }
