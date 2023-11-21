@@ -18,4 +18,4 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use('/auth', authController)
 app.use('/product', productController)
-app.listen(3000, () => console.log("server has started"))
+app.listen(8080, () => console.log("server has started"))
